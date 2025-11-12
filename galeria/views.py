@@ -13,6 +13,14 @@ def imagem(request,foto_id):
     return render(request, 'galeria/imagem.html',{"fotografia": fotografia})
 
 
+def buscar_por_categoria(request,categoria):
+    fotografias = Fotografia.objects.filter(
+        publicado = True,
+        categoria__iexact=categoria
+    ).order_by("data_fotografia")
+    return render(request, "galeria/buscar.html", {"cards":fotografias, "categorias":categoria})
+
+
 
 def buscar(request):
     fotografias = Fotografia.objects.order_by("data_fotografia").filter(publicado=True)

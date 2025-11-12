@@ -394,9 +394,23 @@ table {
     width: 100px;
     text-align: center;
     border: 2px solid transparent;
+    color: white;
+    transition: 0.2s linear;
 }
 
-.tags__tag:hover {
+.tags__tag:hover  {
     border: 2px solid #7B78E5;
     cursor: pointer;
+    color: rgb(255, 255, 255);
+    transition: 0.2s linear;
+}
+.tags__tag a {
+color: rgba(255, 255, 255, 0.405);
+transition: 0.2s linear;
+text-decoration: none;
+}
+
+.tags__tag:hover a{
+    color: whitesmoke;
+    transition: 0.2s linear;
 }
