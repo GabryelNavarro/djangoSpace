@@ -33,7 +33,7 @@ body {
     line-height: 1;
     font-family: 'Space Grotesk', sans-serif;
     min-height: 100vh;
-    background: linear-gradient(#041833,#04244F,#154580);
+    background: linear-gradient(#101010,#070021,#101010);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -65,14 +65,16 @@ table {
 }
 
 .banner__titulo {
-    color: #FFFFFF;
-    font-size: 40px;
+    color: #ffffff;
+    font-size: 2.5rem;
     width: 350px;
     line-height: 50px;
     position: absolute;
     top: 80px;
     left: 80px;
-}
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0px 8px 8px black;
+}                   
 
 .cabecalho {
     align-items: center;
@@ -84,17 +86,18 @@ table {
 .cabecalho__busca {
     align-items: center;
     border-radius: 10px;
-    background: linear-gradient(45deg, #C98CF1,#7B78E5);
+    background: linear-gradient(45deg, #0300518d,#7B78E5);
     display: flex;
     height: auto;
     justify-content: space-between;
     padding: 2px;
-    width: auto; 
+    width: auto;
+    box-shadow: 0px 0px 8px rgb(0, 35, 160);
 }
-
+    
 .busca__fundo {
     align-items: center;
-    background-color: #041A37;
+    background-color: #0f0f0f;
     border-radius: 8px;
     display: flex;
     margin: 0 auto;
@@ -104,17 +107,30 @@ table {
 .busca__input {
     align-items: center;
     background-color: transparent;
-    border: none;
+    border: none !important;
     font-size: 1rem;
     height: 24px;
     padding: 10px;
     width: 500px;
+    color: white;
+    outline: none;
 }
+.botao_busca{
+    background-color: transparent;
+    border: none;   
+}
+
+
 
 .busca__icone {
     cursor: pointer;
     width: 2rem;
     height: 2rem;
+    background-color: transparent;
+    border: none;
+    margin-top: -1.5rem;
+    position: absolute;
+    margin-left: -3rem;
 }
 
 .cards {
@@ -126,6 +142,8 @@ table {
     font-size: 2rem;
     line-height: 3rem;
     margin-bottom: 1.5rem;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.704);
+    letter-spacing: 3px;
 }
 
 .cards__lista{
