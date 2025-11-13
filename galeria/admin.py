@@ -8,7 +8,7 @@ class ListandoFotografias(admin.ModelAdmin):
     list_display_links = ("id", "nome")
     search_fields = ("nome",)
     list_per_page = 5
-    list_filter =("categoria","publicado","categoria",("data_fotografia",DateRangeFilter),)
+    list_filter =("publicado","categoria",("data_fotografia",DateRangeFilter),)
     
 
   

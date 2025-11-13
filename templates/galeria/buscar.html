@@ -11,7 +11,7 @@
         <ul class="tags__lista">
     <li class="tags__tag"><a href="{% url 'buscar_por_categoria' 'Nebulosa' %}">Nebulosa</a></li>
     <li class="tags__tag"><a href="{% url 'buscar_por_categoria' 'Estrela' %}">Estrela</a></li>
-    <li class="tags__tag"><a href="{% url 'buscar_por_categoria' 'Galáxia' %}">Galáxia</a></li>
+    <li class="tags__tag"><a href="{% url 'buscar_por_categoria' 'GALÁXIA' %}">Galáxia</a></li>
     <li class="tags__tag"><a href="{% url 'buscar_por_categoria' 'Planeta' %}">Planeta</a></li>
 </ul>
     </section>
@@ -22,8 +22,9 @@
                 {% if cards %}
                         {% for fotografia in cards %}
 
-                <li class="card">
-                    <a href="{% url 'imagem' fotografia.id %}">
+                <li class="card" onclick="window.location.href='{% url 'imagem' fotografia.id %}'">
+
+                    
                         {% if fotografia.foto == "" or fotografia.foto == null %}
                         <img class="card__imagem" src="{% static '/assets/imagens/galeria/images-not-found.png'%}"
                             alt="Imagem not found 404">

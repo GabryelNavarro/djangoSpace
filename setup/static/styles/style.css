@@ -135,7 +135,10 @@ table {
 
 .cards {
     width: 100%;
+   
 }
+
+
 
 .cards__titulo {
     color: #7B78E5;
@@ -163,8 +166,10 @@ table {
 }
 
 .card__imagem {
-    width: 450px;
-    border-radius: 10px 10px 0 0;
+    width: 50%;
+    border-radius: 10px;
+    
+    box-shadow: 0px 0px 8px #7471d9;
 }
 
 .card__tag {
@@ -179,11 +184,36 @@ table {
     text-align: center;
     top: 20px;
     width: 100px;
+    box-shadow: 0px 0px 8px #7471d9;
 }
 
 .card__info {
     font-size: 1.2rem;
     padding: 0 1.5rem 1rem 1.5rem;
+    border: 1px solid transparent;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px #7471d9;
+    background-image: linear-gradient(30deg, #454383,rgba(0, 0, 0, 0));
+    border-left: 0px;
+   
+}
+
+li {
+    
+    padding: 0.75rem;
+  
+    margin-top: 2rem;
+     transition: 0.5s ease-out;
+     border: 1px solid rgb(45, 45, 45);
+}
+li:hover{
+
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+      
+      box-shadow: 10px 10px 10px #7571d957;
+      border: 1px solid #7471d9;
 }
 
 .card__titulo {
@@ -251,15 +281,41 @@ table {
 .imagem__titulo {
     font-weight: bold;
     line-height: 2rem;
-    color: #FFFFFF;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-size: 16pt;
 }
 
 .imagem__texto {
     font-size: 1rem;
+    
+}
+.imagem__descricao {
+    margin-top: 20px;
 }
 
-.imagem__descricao {
-    font-size: 0.7rem;
+.imagem__descricao p {
+  background-color: #070120;
+  padding: 16px;
+  margin-bottom: 30px;
+  border-left: 5px solid #7370d9;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #ffffff;
+  box-shadow: 0px 0px 8px #7370d9;
+}
+
+
+
+.imagem__legenda{
+       font-size: 1rem;
+    text-align: justify;
+    margin-top: 1rem;
+    line-height: 1.6;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .menu-lateral {
@@ -349,16 +405,73 @@ table {
     display: flex;
     justify-content: space-between;
 }
-
-.rodape {
-    background-color: #04244F;
-    width: 100%;
-    padding: 1.5rem 3rem;
-    box-sizing: border-box;
+.div_imagem-logos{
     display: flex;
-    justify-content: space-between;
-    color: #FFFFFF;
+    margin-left: 4.37rem;
+    
 }
+
+.div_imagem-logos img{
+    filter: grayscale(100%);
+    transition: 0.5s linear;
+}
+.div_imagem-logos img:hover{
+    filter: grayscale(0%);
+    cursor: pointer;
+    transition: 0.5s linear;
+}
+
+
+
+
+
+.imagem_logo_foot{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.62rem;
+    
+
+}
+.imagem_logo_foot_a{
+    width: 3.2rem;
+    height: 3.2rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 0.6rem;
+    margin-top: 0.5rem;
+    border-radius: 15px;
+}
+.imagem_logo_foot_L{
+    width: 5.5rem;
+    height: 5.5rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 0.6rem;
+    padding-top: 0rem;
+
+}
+.rodape {
+    background-image: linear-gradient(20deg, #0D0B16,#0F0D14);
+    border-top: 1px solid #7571d972;
+    box-shadow: 0px 0px 8px #7471d9
+   
+}
+
+.imagem_empresa_logo{
+    width :200px;
+    position: relative;
+    margin-left: 46rem;
+    margin-top: -6rem;
+    padding-top: 3.2rem;
+   z-index: 9;
+   
+}
+
 
 .rodape__icones {
     width: 80px;
@@ -366,8 +479,11 @@ table {
     justify-content: space-between;
 }
 
-.rodape__texto {
+.rodape__texto {    
     font-size: 1.1rem;
+    letter-spacing: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0px 8px 8px #024c7aa6;;
 }
 
 .tags {
@@ -403,6 +519,7 @@ table {
     cursor: pointer;
     color: rgb(255, 255, 255);
     transition: 0.2s linear;
+    
 }
 .tags__tag a {
 color: rgba(255, 255, 255, 0.405);
@@ -413,4 +530,5 @@ text-decoration: none;
 .tags__tag:hover a{
     color: whitesmoke;
     transition: 0.2s linear;
+    
 }
