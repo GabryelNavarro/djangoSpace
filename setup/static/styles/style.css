@@ -531,3 +531,82 @@ text-decoration: none;
     transition: 0.2s linear;
     
 }
+
+
+/* USUARIOS LOGIN HTML */
+
+.div-form-login{
+    padding: 4rem;
+    margin: 14.5rem;
+    width: 100%;
+    display: flex;
+    left: -8rem;
+    position: relative;
+    top: -8rem;
+    color: #837AE6;
+    background-image: linear-gradient(10deg,#09041e,#45438332);
+    border-radius: 15px;
+    border: 1px solid #7b77e6;
+    box-shadow: 1px 1px 30px #030379;
+    text-shadow: 0px 0px 2px white;
+    text-transform: uppercase;
+}
+
+
+
+.div-inputs_labels-login input{
+    padding: 0.5rem;
+    margin-top: 2rem;
+    display: flex;
+    width: 31.26rem;
+    height:2rem;
+    border-radius: 5px;
+   background-image: linear-gradient(to left, #242349, #1b186b, #242358, #242349);
+
+    border: 1px solid #847BE7;
+    color: white;
+    box-shadow: 0px 0px 10px #0800f0;
+    outline: #7b77e6;
+    font-size: 1rem;
+
+}
+
+.div-inputs_labels-login label{
+ top: 1rem;
+ position: relative;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ letter-spacing: 2px;
+ 
+
+ 
+}
+
+
+.div-botao-login{
+    margin-top:3rem;
+    width: 100%;
+    margin-left: 9rem
+}
+
+.div-botao-login button{
+    width: 13rem;
+    height: 2.5rem;
+    border-radius: 5px;
+     border: 1px solid #847BE7;
+    background-image: linear-gradient(to left, #242349, #1b186b, #242358, #242349);
+ 
+    filter:opacity(55%);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+     box-shadow: 0px 0px 10px #0800f0;
+    transition: 0.5s ease-out;
+ 
+}
+
+.div-botao-login button:hover{
+    cursor:pointer;
+    transition:0.2s ease-in-out;
+    filter:opacity(100%);
+   
+}
