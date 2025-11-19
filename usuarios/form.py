@@ -40,7 +40,7 @@ class CadastroForms(forms.Form):
         )
     )
     email_cadastro = forms.EmailField(
-         label= "nome completo",
+         label= "E-MAIL",
         required=True,
         max_length=100,
          widget= forms.EmailInput(
@@ -63,7 +63,7 @@ class CadastroForms(forms.Form):
         )
     )
     senha_cadastro_2=forms.CharField(
-        label= "Senha",
+        label= "Cofirme a senha",
         required=True,
         max_length=70,
         widget= forms.PasswordInput(

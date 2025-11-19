@@ -16,7 +16,7 @@
 
 </section>
 <div class="div-form-login"> 
-    <form action="" method="">
+    <form action="{% url 'login' %}" method="post">
         {% csrf_token %}
         <div class="div-inputs_labels-login">
             {% for field in form.visible_fields %}

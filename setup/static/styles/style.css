@@ -17,12 +17,18 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+    /* margin: 0; */
+    /* padding: 0; */
+    /* border: 0; */
+    /* font-size: 100%; */
+    /* font: inherit; */
+    /* vertical-align: baseline; */
+}
+
+p {}
+
+modal-box p {
+    margin-top: 35px;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -533,7 +539,7 @@ text-decoration: none;
 }
 
 
-/* USUARIOS LOGIN HTML */
+/* USUARIOS LOGIN HTML E CADASTRO HTML */
 
 .div-form-login{
     padding: 4rem;
@@ -550,6 +556,103 @@ text-decoration: none;
     box-shadow: 1px 1px 30px #030379;
     text-shadow: 0px 0px 2px white;
     text-transform: uppercase;
+}
+.error-text{
+      color: red;
+  font-size: 0.9em;
+  margin-top: 10px;
+  margin-left: 1rem;
+  text-shadow: 0px 0px 2px red;
+
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+    animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+
+}
+
+
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.modal-box {
+    position: absolute;
+    height: 18.75rem;
+     background-image: linear-gradient(10deg,black,#0a0031);
+    color: green;
+    padding: 1.87rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px #7b77e6;
+    width: 37.5rem;
+    top: 12.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    animation: fadeInBox 1s ease forwards;
+
+}
+
+@keyframes fadeInBox {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.modal-box p{
+    margin-top: 100px;
+    text-shadow: 0px 0px 2px #000000
+}
+
+.modal-box button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: 1px solid green;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+width: 150px;
+    box-shadow: 0px 0px 20px green
+    
+    
+}
+
+.modal-box button:hover {
+  background-color: #00b700;
+  cursor: pointer;
+}
+
+.custom-alert.error {
+  background-color: #dc3545;
+}
+
+.close-alert {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 

@@ -2,42 +2,46 @@
 {% load static %}
 {% block content %}
 
+{% if messages %}
+  {% for message in messages %}
+    <div class="custom-alert {{ message.tags }}">
+      {{ message }}
+      <span class="close-alert" onclick="this.parentElement.style.display='none';">&times;</span>
+    </div>
+  {% endfor %}
+{% endif %}
 
+{% if cadastro_sucesso %}
+  <div class="modal-overlay">
+    <div class="modal-box">
+      <p>Cadastro realizado com sucesso!</p>
+      <button onclick="window.location.href='{% url 'login' %}'">OK</button>
+    </div>
+  </div>
+{% endif %}
 
 <section class="galeria">
-    <div class="cards">
-
-
-
-
-
-
-
-
+  <div class="cards">
 </section>
-<div class="div-form-login">
-    <form action="" method="">
-        <div class="div-inputs_labels-login">
-            <label for="usuario">Nome Completo</label>
-            <input type="text" placeholder="Usuário" required>
 
-            <label class="senha-login" for="email">E-mail</label>
-            <input type="email" required placeholder="E-mail">
-
-            <label class="senha-login" for="password">Senha</label>
-            <input type="password" required placeholder="Senha">
-
-            <label class="senha-login" for="password">Cofirme a senha</label>
-            <input type="password" required placeholder="Digite sua senha mais uma vez">
-            
-        </div>
-        <div class="div-botao-login">
-            <button type="submit">CRIAR CONTA</button>
-        </div>
-
-    </form>
-
-
+<div class="div-form-login"> 
+  <form action="{% url 'cadastro' %}" method="POST">
+    {% csrf_token %}
+    <div class="div-inputs_labels-login">
+      {% for field in form.visible_fields %}
+      <div>
+        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% for error in field.errors %}
+        <p class="error-text">{{ error }}</p>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+    <div class="div-botao-login">
+      <button type="submit">CRIAR CONTA</button>
+    </div>
+  </form>
 </div>
 
 </div>
